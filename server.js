@@ -8,18 +8,18 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Endpoint pour déployer un modèle
+// Endpoint to deploy a model
 app.post('/deploy', (req, res) => {
-    // Logic pour déployer le modèle
-    res.status(200).send('Modèle déployé avec succès');
+    // Logic to deploy the model
+    res.status(200).send('Model deployed successfully');
 });
 
-// Endpoint pour surveiller le modèle
+// Endpoint to monitor the model
 app.get('/monitor/:modelId', (req, res) => {
-    // Logic pour surveiller le modèle
-    res.status(200).send(`Surveillance des performances du modèle ${req.params.modelId}`);
+    // Logic to monitor the model
+    res.status(200).send(`Monitoring performance of model ${req.params.modelId}`);
 });
 
 app.listen(PORT, () => {
-    console.log(`Serveur écoutant sur le port ${PORT}`);
+    console.log(`Server listening on port ${PORT}`);
 });
