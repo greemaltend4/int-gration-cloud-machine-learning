@@ -1,7 +1,7 @@
 {
   "name": "integration-cloud-machine-learning",
   "version": "1.0.0",
-  "description": "Projet d'intégration de modèles de machine learning dans le cloud",
+  "description": "Integration project for deploying machine learning models in the cloud",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
