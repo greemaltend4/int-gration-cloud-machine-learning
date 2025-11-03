@@ -10,8 +10,12 @@ app.use(bodyParser.json());
 
 // Endpoint to deploy a model
 app.post('/deploy', (req, res) => {
-    // Logic to deploy the model
-    res.status(200).json({ message: 'Model deployed successfully' });
+    try {
+        // Logic to deploy the model
+        res.status(200).json({ message: 'Model deployed successfully' });
+    } catch (error) {
+        res.status(500).json({ message: 'Failed to deploy model', error: error.message });
+    }
 });
 
 // Endpoint to monitor the model
